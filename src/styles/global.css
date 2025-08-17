@@ -5,13 +5,24 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 20%, #cce7ff 40%, #b3daff 60%, #99cdff 80%, #ffd700 100%);
+    font-family: "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+    background: linear-gradient(
+            135deg,
+            #f0f8ff 0%,
+            #e6f3ff 20%,
+            #cce7ff 40%,
+            #b3daff 60%,
+            #99cdff 80%,
+            #ffd700 100%
+    );
     color: #1a365d;
     overflow-x: hidden;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 20%, #cce7ff 40%, #b3daff 60%, #99cdff 80%, #ffd700 100%);
 }
 
-/* Animated background particles */
 .particles {
     position: fixed;
     top: 0;
@@ -32,10 +43,20 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translateY(100vh) translateX(0px); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+    0% {
+        transform: translateY(100vh) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+    }
 }
 
 /* Header */
@@ -90,7 +111,7 @@ nav {
 }
 
 .nav-links a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -106,7 +127,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    padding: 5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,15 +143,26 @@ nav {
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h1 {
     font-size: 4rem;
     font-weight: 900;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #1a365d 0%, #2b6cb8 50%, #ff6b6b 100%);
+    background: linear-gradient(
+            135deg,
+            #1a365d 0%,
+            #2b6cb8 50%,
+            #ff6b6b 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -158,8 +190,13 @@ nav {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .cta-button {
@@ -195,7 +232,7 @@ nav {
 
 /* Sections */
 section {
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -229,8 +266,20 @@ section {
     overflow: hidden;
 }
 
+#partners .card a {
+    color: #2b6cb8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#partners .card a:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
 .card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -342,8 +391,8 @@ footer {
     }
 
     .lema {
-        font-size: 1.3rem;
-        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+        padding: 0.5rem 1.2rem;
     }
 
     .nav-links {
@@ -352,5 +401,12 @@ footer {
 
     section {
         padding: 4rem 1rem;
+    }
+
+    .hero a.cta-button,
+    .hero a.cta-secondary {
+        display: block;
+        width: 90%;
+        margin: 0.5rem auto;
     }
 }
