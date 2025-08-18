@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as v;
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: v.$color-primary;
+  overflow-x: hidden;
+}
